@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>正規表現の勉強</title>
+</head>
+<body>
+<script>
+
+//メタ文字
+//[abc]
+//[a-z]
+//[^abc]
+
+//. -> 任意の1文字
+//^ -> 行頭
+//$ -> 行末
+
+//0{2} -> 直前の文字の繰り返し回数 -> 00
+//0{2,} 00, 000, 0000000
+//0{2,4} 00, 000, 0000
+
+//[a-z]{5}
+//[a-z]{3,6}
+
+//a? 0 or 1 -> , a
+//a* 0 or more -> , a aaa aaa
+//a+ 1 or more -> a aa aaa
+
+//(abc)* -> abcabc
+// | -> or
+//(abc|def) -> abc , def
+
+//\n -> 改行
+//\t -> タブ
+//\d -> 数字 [0-9]
+//\w -> 英数字_ [A-Za-z0-9_]
+//\s -> スペース、タブ
+//\メタ文字 -> メタ文字
+
+//* + のあとの? -> 最小マッチさせる
+//a?
+
+//フラグ
+// i -> 大文字小文字を区別しない
+// g -> すべてのマッチした要素を配列で返す
+// m -> 複数行
+
+var s = '@taguchi, @fkoji, @dotinstall';
+var rs = s.match(/a/g);
+
+if (rs) {
+    console.log(rs);
+}
+
+</script>
+</body>
+</html>
